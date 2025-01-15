@@ -30,3 +30,20 @@ __Composition API__ te permite importar funciones en vez de declarar opciones (c
 
 ### ¿Qué es screaming architecture y qué ventajas tiene?
 
+__screaming architecture__ es una exprecion para referirse a como deverias de saber cual es el proposito y la funcionalidad de la arquitectura del proyecto con solo verlo, esto hace que se tenga una idea clara de lo que se quiere conseguir con este
+
+## Vamos a modificar y borrar todo lo que no necesitamos que nos ha creado de forma automática VueJS
+
+### Recuerda que vamos a utilizar TS en lugar de JS,  ¿cómo se lo indicamos a Vue?
+
+Añadiendo setup lang="ts"
+
+## Para realizar nuestra aplicación en lugar del framework de CSS Bootstrap, vamos a usar Tailwind CSS
+
+### Configura el proyecto para hacer uso de Tailwind CSS.
+
+<img src=./images/5.png width="500">
+
+### Ejecuta el comando npm run dev y muestra el resultado.
+
+<img src=./images/4.png width="500">
