@@ -1,4 +1,4 @@
-# Proyecto-Pokemon-Game
+# Iniciando Proyecto Pokemon Game
 
 ## 1. Crea y configura tu repositorio de Github para la aplicación.
 
@@ -46,4 +46,38 @@ Añadiendo setup lang="ts"
 
 ### Ejecuta el comando npm run dev y muestra el resultado.
 
-<img src=./images/4.png width="500">
+<img src=./images/4.png width="200">
+
+
+# Estructura de la aplicación
+
+## borramos la carpeta de components, dentro de src crea una carpeta modules y dentro de esta una llamada pokemon
+
+<img src=./images/6.png width="200">
+
+### ¿qué es un composable en VueJS y cual es la nomenclatura común que se utiliza en los ficheros que contiene?
+
+una nueva característica de Vue 3 que permiten a los desarrolladores escribir código de manera más clara y concisa
+
+### Creamos una nueva carpeta llamada composables, components y views.
+
+<img src=./images/7.png width="200">
+
+## Dentro de la carpeta de views, vamos a crear el archivo PokemonGame.vue, ¿cuál crees que será la lógica que irá dentro de este archivo?
+
+
+
+### ¿Conoces algún atajo para generar archivo con estructura Typescript y Composition API de forma automática?
+
+Vue-Snipets
+
+<img src=./images/8.png width="700">
+
+## Usando la etiqueta <section> de HTML, vamos a dividir nuestro template.
+
+<img src=./images/9.png width="700">
+
+## ¿Para qué sirven las clases que hemos añadido?
+
+Centrar el texto en la pantalla
+
