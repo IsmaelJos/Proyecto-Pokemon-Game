@@ -87,11 +87,11 @@ Son estilos definidos de tailwind para cambiar la apariencia del elemento
 
 Se ha tenido que añadir un import al App.vue para que PokemonGame se muestre
 
-<img src=./images/10.png width="700">
+<img src=./images/10.png width="400">
 
 ### Si todo ha ido bien, tu aplicación tendría que verse tal que así: 
 
-<img src=./images/11.png width="700">
+<img src=./images/11.png width="500">
 
 ### Utilizando una directiva de VueJS, ¿cómo ocultaríamos esta sección por completo?
 
@@ -99,6 +99,15 @@ v-show="false"
 
 ## Ahora, vamos a crear otra nueva sección igual a la anterior pero que muestre al usuario el mensaje: ¿Cuál es este Pokémon?
 
-<img src=./images/12.png width="700">
+<img src=./images/12.png width="600">
+
+
+# Creando el esqueleto
+
+## PokemonPicture.vue
+
+## El resultado debe ser el siguiente:
+
+<img src=./images/13.png width="600">
 
 

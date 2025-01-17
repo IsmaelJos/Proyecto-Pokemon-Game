@@ -3,7 +3,8 @@ export default {
   content: [
     "./index.html",
     "./src/*",
-    "./src/views/*"
+    "./src/views/*",
+    "./src/components/*"
   ],
   theme: {
     extend: {},
