@@ -73,11 +73,32 @@ Vue-Snipets
 
 <img src=./images/8.png width="700">
 
-## Usando la etiqueta <section> de HTML, vamos a dividir nuestro template.
+## Usando la etiqueta "section" de HTML, vamos a dividir nuestro template. 
+
+### Añadimos Una sección que tenga un mensaje que indique al usuario que: Espere por favor y Cargando Pokémons.
 
 <img src=./images/9.png width="700">
 
-## ¿Para qué sirven las clases que hemos añadido?
+### ¿Para qué sirven las clases que hemos añadido?
 
-Centrar el texto en la pantalla
+Son estilos definidos de tailwind para cambiar la apariencia del elemento
+
+### Algo se te olvida... ¿qué es? Indica los archivos que has tenido que modificar.
+
+Se ha tenido que añadir un import al App.vue para que PokemonGame se muestre
+
+<img src=./images/10.png width="700">
+
+### Si todo ha ido bien, tu aplicación tendría que verse tal que así: 
+
+<img src=./images/11.png width="700">
+
+### Utilizando una directiva de VueJS, ¿cómo ocultaríamos esta sección por completo?
+
+v-show="false"
+
+## Ahora, vamos a crear otra nueva sección igual a la anterior pero que muestre al usuario el mensaje: ¿Cuál es este Pokémon?
+
+<img src=./images/12.png width="700">
+
 
