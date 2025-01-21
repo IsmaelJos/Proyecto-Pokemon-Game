@@ -14,13 +14,8 @@ import PokemonOptions from './components/PokemonOptions.vue';
 </script>
 
 <template>
-  <div style="background-color: #f1f1f1;">
-    <PokemonGame/>
-    <section class="flex flex-col justify-center items-center w-screen h-screen">
-      <PokemonPicture/>
-      <PokemonOptions/>
-    </section>
-    
+  <div>
+      <PokemonGame/>
   </div>
 </template>
 

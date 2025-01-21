@@ -10,12 +10,18 @@ export default defineComponent({
 </script>
 
 <template>
-    <section class="flex flex-col justify-center items-center ">
-        <h1>¿Quien es este pokemon?</h1>
-        <!--    Pokemon Picture    -->
+    <section>
         <img class="h-[200px] brightness-0" src="../assets/dito.png"/>
     </section>
     
 </template>
 
-<style scoped ></style>
+<style scoped >
+img {
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+</style>
