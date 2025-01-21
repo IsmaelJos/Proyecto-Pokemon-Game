@@ -116,7 +116,7 @@ v-show="false"
 
 ### vamos a "simular" lo que serían las opciones de los Pokémon mediante una lista HTML
 
-<img src=./images/16.png width="400">
+<img src=./images/16.png width="300">
 
 ### El color de fondo de nuestra aplicación es: #f1f1f1, para aplicarlo, ¿dónde debes colocar el código css correspondiente?
 
