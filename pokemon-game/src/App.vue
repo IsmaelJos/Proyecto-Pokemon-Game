@@ -2,20 +2,25 @@
   import { defineComponent } from 'vue';
   import PokemonGame from './views/PokemonGame.vue';
 import PokemonPicture from './components/PokemonPicture.vue';
+import PokemonOptions from './components/PokemonOptions.vue';
 
   export default defineComponent({
     data() {
         let message = "Hello world";
         return { message };
     },
-    components: { PokemonGame, PokemonPicture }
+    components: { PokemonGame, PokemonPicture, PokemonOptions }
 })
 </script>
 
 <template>
-  <div>
+  <div style="background-color: #f1f1f1;">
     <PokemonGame/>
-    <PokemonPicture/>
+    <section class="flex flex-col justify-center items-center w-screen h-screen">
+      <PokemonPicture/>
+      <PokemonOptions/>
+    </section>
+    
   </div>
 </template>
 

@@ -106,8 +106,23 @@ v-show="false"
 
 ## PokemonPicture.vue
 
-## El resultado debe ser el siguiente:
+### La misma forma que en PokemonGame.vue que contendrá una imagen del pokemon Ditto (copia y pega la url de la imagen y muéstrala)
 
-<img src=./images/13.png width="600">
+<img src=./images/14.png width="400">
+
+### Queremos que esté completamente oculta utilizando una clase de "brightness-0" y un tamaño concreto con h-[200px]
+
+<img src=./images/13.png width="400">
+
+### vamos a "simular" lo que serían las opciones de los Pokémon mediante una lista HTML
+
+<img src=./images/16.png width="400">
+
+### El color de fondo de nuestra aplicación es: #f1f1f1, para aplicarlo, ¿dónde debes colocar el código css correspondiente?
+
+<img src=./images/15.png width="400">
+
+
+
 
 

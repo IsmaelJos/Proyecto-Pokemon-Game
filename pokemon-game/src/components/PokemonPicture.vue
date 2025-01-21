@@ -10,11 +10,12 @@ export default defineComponent({
 </script>
 
 <template>
-    <section class="flex flex-col justify-center items-center w-screen h-screen">
+    <section class="flex flex-col justify-center items-center ">
         <h1>¿Quien es este pokemon?</h1>
         <!--    Pokemon Picture    -->
-        <img src="../assets/dito.png"/>
+        <img class="h-[200px] brightness-0" src="../assets/dito.png"/>
     </section>
+    
 </template>
 
 <style scoped ></style>
