@@ -125,4 +125,21 @@ v-show="false"
 
 # Conectando la API usando Axios
 
+### Dentro de la carpeta de assets, copia y pega el código de animations.css
+
+<img src=./images/17.png width="200">
+
+#### Nuestro juego va a tener 3 estados: gana, pierde y jugando. Estos estados los vamos a almacenar en una propiedad reactiva. Para ello, dentro de la carpeta pokemon vamos a crear una nueva llamada interfaces, y en él crearemos un archivo llamado game-status.enum.ts.
+
+<img src=./images/18.png width="200">
+
+#### Crearemos un nuevo archivo llamado index.ts que será nuestro archivo de barril. ¿A qué nos referimos con este término en programación y cuáles son sus ventajas? 
+
+Un archivo de barril es donde se exportan varios modulos para asi solo tener que hacer un export si quieres usarlos
+
+## Ahora, vamos a conectarnos con nuestra PokeApi mediante Axios
+
+#### ¿Qué es Axios? ¿Lo has usado antes?
+
+Es una libreria para hacer llamadas HTTP que puedes usar facilmente con node, lo hemos usado ya con anterioridad
 

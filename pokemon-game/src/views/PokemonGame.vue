@@ -2,8 +2,10 @@
 import PokemonOptions from '@/components/PokemonOptions.vue';
 import PokemonPicture from '@/components/PokemonPicture.vue';
 import { defineComponent } from 'vue';
+import { usePokemonGame } from '../modules/pokemon/composables/usePokemonGame';
 
-    export default defineComponent({
+export default defineComponent({
+    const { GameStatus } = usePokemonGame();
     name: '',
     setup(props, { emit, attrs, expose, slots }) {
         return {};
