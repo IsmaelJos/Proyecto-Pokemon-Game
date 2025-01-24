@@ -1,21 +1,10 @@
 import axios from "axios";
-import { useState, useEffect } from 'react';
+import type { PokemonListResponse } from "../interfaces";
 
-export interface Pokemon {
-    id: number;
-    name: string;
-    height: number;
-    weight: number;
-    sprites: {
-      front_default: string;
-    };
+
+export class pokemonApi {
+  async get(limit:string) {
+      const response = await axios.get('https://pokeapi.co/api/v2/pokemon'+limit);
+      return response.data as PokemonListResponse;
+  }
 }
-  
-  export interface PokemonDetails extends Pokemon {
-    abilities?: {
-      ability: string;
-      name: string;
-    }[];
-}      
-
-

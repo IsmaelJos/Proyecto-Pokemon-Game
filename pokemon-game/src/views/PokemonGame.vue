@@ -1,17 +1,10 @@
-<script lang="ts">
+<script setup lang="ts">
 import PokemonOptions from '@/components/PokemonOptions.vue';
 import PokemonPicture from '@/components/PokemonPicture.vue';
-import { defineComponent } from 'vue';
 import { usePokemonGame } from '../modules/pokemon/composables/usePokemonGame';
 
-export default defineComponent({
-    const { GameStatus } = usePokemonGame();
-    name: '',
-    setup(props, { emit, attrs, expose, slots }) {
-        return {};
-    },
-    components: { PokemonPicture, PokemonOptions }
-});
+  const {gameStatus} = usePokemonGame();
+
 </script>
 
 <template>

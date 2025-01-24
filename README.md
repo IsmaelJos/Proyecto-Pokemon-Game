@@ -143,3 +143,24 @@ Un archivo de barril es donde se exportan varios modulos para asi solo tener que
 
 Es una libreria para hacer llamadas HTTP que puedes usar facilmente con node, lo hemos usado ya con anterioridad
 
+#### Dentro de la carpeta de pokemon crea una nueva llamada api y crea un archivo pokemonApi.ts, dentro del archivo que acabamos de crear, usa axios para realizar la conexión con PokeApi
+
+<img src=./images/19.png width="700">
+
+<img src=./images/20.png width="700">
+
+### Los datos que hemos obtenido no son técnicamente los que nos interesan, ya que solo necesitamos el id y el nombre de los Pokemon. Por tanto, lo que vamos a hacer es crear un tipado estricto
+
+#### Abre Postman, Realiza una petición a PokeApi 
+
+<img src=./images/21.png width="600">
+
+#### Vuelve a Visual Studio y dentro de la carpeta de interfaces crea un archivo llamado pokemon-list.response.ts, usa la extensión de Paste JSON as Code y ponle a nivel superior: PokemonListResponse  y dale a enter.
+
+<img src=./images/22.png width="600">
+
+#### Ahora en response.data vamos a tener toda la información de la petición
+
+<img src=./images/24.png width="600">
+
+<img src=./images/23.png width="600">
