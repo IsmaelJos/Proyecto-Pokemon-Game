@@ -161,6 +161,59 @@ Es una libreria para hacer llamadas HTTP que puedes usar facilmente con node, lo
 
 #### Ahora en response.data vamos a tener toda la información de la petición
 
-<img src=./images/24.png width="600">
+<img src=./images/24.png width="500">
 
-<img src=./images/23.png width="600">
+<img src=./images/23.png width="800">
+
+# Modificando método getPokemons()
+
+## Vamos a modificar el método getPokemons que hemos creado en el archivo usePokemonGame.ts para quedarnos solo con el nombre y el id 
+
+#### Para ello vamos a crear un nuevo archivo dentro de la carpeta interfaces que se va a llamar pokemon.interface.ts
+
+<img src=./images/25.png width="300">
+
+### Modificamos el método getPokemons
+
+<img src=./images/26.png width="600">
+
+#### ¿Qué es lo que estamos haciendo?
+
+Devolviendo el nombre y la id de los pokemon hasta el limite elegido
+
+#### ¿Para qué sirve la línea de código: const id = urlParts[urlParts.length - 2] ?? 0;?
+
+Hace que ID sea igual a la antepenultima parte de la URL (dividida por cada / ) la cual hace referencia a la id del pokemon, el ?? hace que si es null le aplica un 0
+
+### Ahora vamos a llamar a nuestro método modificando el onMounted()
+
+<img src=./images/27.png width="400">
+
+<img src=./images/30.png width="600">
+
+
+### El resultado ahora nos muestra una lista de los 151 pokemons ordenados según su id. Nosotros NO queremos que estén ordenados ¿se te ocurre cómo hacerlo?
+
+<img src=./images/28.png width="600">
+
+<img src=./images/29.png width="600">
+
+# Final
+
+### Para continuar, lo que debemos hacer es poder determinar varias propiedades computadas que vamos a necesitas
+
+#### ¿Qué es una propiedad computada?
+
+Una propiedad que antes de devolverse se ejecuta algun tipo de transformacion o hacen algun calculo asi que pueden ser diferentes en distintos momentos
+
+#### En usePokemonGame.ts crea una nueva propiedad computada llamada isLoading
+
+<img src=./images/31.png width="600">
+
+### Lo que estamos haciendo aquí es determinar si el array de Pokemon está o no vacío, de tal forma que podamos mostrar o no cierta información en base a ello
+
+#### Mostrar en PokemonGame.vue el mensaje de "Espere por favor" y "Cargando Pokemons"
+
+<img src=./images/32.png width="600">
+
+
