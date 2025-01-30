@@ -216,4 +216,19 @@ Una propiedad que antes de devolverse se ejecuta algun tipo de transformacion o 
 
 <img src=./images/32.png width="600">
 
+#### Añade una promesa en onMounted() del archivo usePokemonGame usando la función setTimeout para que al cargar la respuesta, tarde 1000 milésimas de segundo
+
+<img src=./images/33.png width="500">
+
+#### Una vez compruebes que funciona correctamente, puedes borrarlo, ya que no nos va a hacer falta
+
+### Ahora vamos a crear otra propiedad reactiva a la que vamos a llamar pokemonOptions:
+
+<img src=./images/34.png width="400">
+
+### Estos pokemonOption van a ser las opciones de los Pokemons que vamos a mostrar, y por tanto, tenemos que crear una nueva función para manejarlas
+
+<img src=./images/35.png width="600">
+
+#### ¿Cómo funciona este fragmento de código? Muestra por consola pokemonOptions.value para comprobar que efectivamente nos está devolviendo 4 pokemons como propiedades reactivas.
 

@@ -4,7 +4,7 @@ import { GameStatus, type Pokemon, type PokemonListResponse } from '../interface
 
 export const usePokemonGame = () => {
     
-    
+    const pokemonOptions = ref<Pokemon[]>([]);
     const gameStatus = ref<GameStatus>( GameStatus.Playing);
     const pokemons = ref<Pokemon[]>([]);
 
@@ -32,16 +32,24 @@ export const usePokemonGame = () => {
         //return pokemonsArray;
         
     };
+
+    const getNextOptions = (howMany: number = 4) => {
+        gameStatus.value = GameStatus.Playing;
+        pokemonOptions.value = pokemons.value.slice(0, howMany);
+        pokemons.value = pokemons.value.slice(howMany);
+    }
     
     onMounted(() =>{
         const pokemons = getPokemons();
-        console.log({pokemons});
-        setTimeout(() => isLoading = false, 1000);
-
+        console.log(pokemons)
+        getNextOptions()
+        
     });
 
     return{
         gameStatus,
         isLoading,
+        pokemonOptions,
+        getNextOptions,
     }
 }
