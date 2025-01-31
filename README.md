@@ -289,7 +289,10 @@ Te segmenta de la proxima serie de pokemon un numero (en este caso 4) de pokemon
 
 #### Ahora, en PokemonOptions.vue, borramos la lista que teniamos de ejemplo y la sustituimos por botones
 
+Se crea una lista de las opciones con botones
+
 <img src=./images/49.png width="900">
+
 
 
 
