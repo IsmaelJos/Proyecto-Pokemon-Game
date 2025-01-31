@@ -1,28 +1,24 @@
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-    name: '',
-    setup(props, { emit, attrs, expose, slots }) {
-        return {};
-    }
-});
-</script>
-
 <template>
-    <section class="mt-5">
-        <ol>
-            <li>Pokémon 1</li>
-            <li>Pokémon 2</li>
-            <li>Pokémon 3</li>
-            <li>Pokémon 4</li>
-        </ol>
+    <section class="mt-5 flex-col">
+        <button v-for="{name, id} in options" :key="id" class="capitalize">
+            {{ name }}
+        </button>
     </section>
 </template>
 
+<script setup lang="ts">
+import type { Pokemon } from '@/modules/pokemon/interfaces';
+interface Props{ 
+    options: Pokemon[];
+}
+
+defineProps<Props>();
+</script>
+
+
 <style scoped >
 
-li {
+button {
     @apply bg-white shadow-md rounded-lg p-3 m-2 cursor-pointer w-40 text-center transition-all hover:bg-gray-100;
   }
 

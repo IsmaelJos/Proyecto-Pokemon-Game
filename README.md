@@ -214,7 +214,7 @@ Una propiedad que antes de devolverse se ejecuta algun tipo de transformacion o 
 
 #### Mostrar en PokemonGame.vue el mensaje de "Espere por favor" y "Cargando Pokemons"
 
-<img src=./images/32.png width="600">
+<img src=./images/32.png width="700">
 
 #### Añade una promesa en onMounted() del archivo usePokemonGame usando la función setTimeout para que al cargar la respuesta, tarde 1000 milésimas de segundo
 
@@ -231,4 +231,66 @@ Una propiedad que antes de devolverse se ejecuta algun tipo de transformacion o 
 <img src=./images/35.png width="600">
 
 #### ¿Cómo funciona este fragmento de código? Muestra por consola pokemonOptions.value para comprobar que efectivamente nos está devolviendo 4 pokemons como propiedades reactivas.
+
+Te segmenta de la proxima serie de pokemon un numero (en este caso 4) de pokemon
+
+<img src=./images/36.png width="400">
+
+#### Tenemos que ser capaces de determinar cual es el Pokemon correcto. Vamos a hacerlo mediante una propiedad computada.
+
+<img src=./images/37.png width="700">
+
+#### De esta forma, lo que estamos haciendo es, obtener un valor que va desde 0 hasta el largo de elementos que tenemos en pokemonOptions (4 en nuestro caso)
+
+### Vamos a añadirlo en nuestro componente
+
+<img src=./images/38.png width="700">
+
+### Hasta este punto, tenemos esto
+
+<img src=./images/39.png width="300">
+
+#### Ahora lo que debemos hacer es saber cual es la imagen correspondiente con ese Pokémon. 
+
+<img src=./images/40.png width="700">
+
+### Vamos a PokemonPicture.vue y lo que tenemos que hacer es:
+#### Definir las props 
+
+<img src=./images/41.png width="200">
+
+#### Hacer el bind de src usando una propiedad computada
+
+<img src=./images/42.png width="300">
+
+<img src=./images/43.png width="800">
+
+#### Muestra el resultado y comprueba que es correcto
+
+<img src=./images/44.png width="300">
+
+### Ahora necesitamos crear otra propiedad que se encargue de mostrar la imagen original si se ha seleccionado la opción correcta
+
+<img src=./images/45.png width="700">
+
+#### Comprueba que ahora se visualiza la imagen del Pokémon original
+
+<img src=./images/46.png width="300">
+
+#### Siguiendo con nuestro PokemonGame, nosotros ya podemos determinar cuando se debe visualizar la imagen correcta usando la propiedad que ya habíamos creado llamada GameStatus
+
+<img src=./images/47.png width="400">
+
+### Mostrar las posibles opciones:
+
+#### Nosotros ya tenemos creado nuestras opciones en pokemonOpcions
+
+<img src=./images/48.png width="350">
+
+#### Ahora, en PokemonOptions.vue, borramos la lista que teniamos de ejemplo y la sustituimos por botones
+
+<img src=./images/49.png width="900">
+
+
+
 

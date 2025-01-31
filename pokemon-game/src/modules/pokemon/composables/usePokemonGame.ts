@@ -10,6 +10,11 @@ export const usePokemonGame = () => {
 
     const isLoading = computed(()=> pokemons.value.length === 0);
 
+    const randomPokemon  = computed(()=> {
+        const randomIndex = Math.floor(Math.random() * pokemonOptions.value.length);
+        return pokemonOptions.value[randomIndex];
+    })
+
     const getPokemons = async (): Promise<Pokemon[]> => {
         
         const pokemonApi0 = new pokemonApi()
@@ -21,8 +26,8 @@ export const usePokemonGame = () => {
             const id = urlParts[urlParts.length - 2] ?? 0;
 
             return{
-                name: pokemon.name,
                 id: +id,
+                name: pokemon.name,
             }
         })
 
@@ -39,17 +44,20 @@ export const usePokemonGame = () => {
         pokemons.value = pokemons.value.slice(howMany);
     }
     
-    onMounted(() =>{
-        const pokemons = getPokemons();
-        console.log(pokemons)
-        getNextOptions()
-        
+    onMounted( async () =>{
+
+        pokemons.value = await getPokemons();
+        //console.log(pokemons)
+        //getNextOptions()
+        getNextOptions();
+        console.log(pokemonOptions.value)
     });
 
     return{
         gameStatus,
         isLoading,
         pokemonOptions,
+        randomPokemon,
         getNextOptions,
     }
 }

@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import PokemonOptions from '@/components/PokemonOptions.vue';
 import PokemonPicture from '@/components/PokemonPicture.vue';
 import { usePokemonGame } from '../modules/pokemon/composables/usePokemonGame';
+import { GameStatus } from '@/modules/pokemon/interfaces';
+import PokemonOptions from '@/components/PokemonOptions.vue';
 
-  const {gameStatus, isLoading} = usePokemonGame();
+  const {gameStatus, isLoading, randomPokemon, pokemonOptions} = usePokemonGame();
 
 </script>
 
@@ -15,10 +16,12 @@ import { usePokemonGame } from '../modules/pokemon/composables/usePokemonGame';
 
     <section v-else class="flex flex-col justify-center items-center w-screen h-screen">
         <h1 class="m-5">¿Quien es este pokemon?</h1>
-        <PokemonPicture/>
-        <PokemonOptions/>
+        <h3>{{ randomPokemon }}</h3>
+        <PokemonPicture 
+        :pokemon-id="randomPokemon.id" 
+        :show-pokemon="gameStatus !== GameStatus.Playing"/>
+        <PokemonOptions :options="pokemonOptions"/>
     </section>
-    
 </template>
 
 <style scoped></style>
