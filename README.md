@@ -312,3 +312,5 @@ Se crea una lista de las opciones con botones
 <img src=./images/53.png width="250">
 <img src=./images/54.png width="400">
 <img src=./images/55.png width="550">
+<img src=./images/56.png width="200">
+<img src=./images/57.png width="200">
