@@ -4,7 +4,7 @@ import { usePokemonGame } from '../modules/pokemon/composables/usePokemonGame';
 import { GameStatus } from '@/modules/pokemon/interfaces';
 import PokemonOptions from '@/components/PokemonOptions.vue';
 
-  const {gameStatus, isLoading, randomPokemon, pokemonOptions} = usePokemonGame();
+  const {gameStatus, isLoading, randomPokemon, pokemonOptions: options, checkAnswer } = usePokemonGame();
 
 </script>
 
@@ -19,8 +19,13 @@ import PokemonOptions from '@/components/PokemonOptions.vue';
         <h3>{{ randomPokemon }}</h3>
         <PokemonPicture 
         :pokemon-id="randomPokemon.id" 
-        :show-pokemon="gameStatus !== GameStatus.Playing"/>
-        <PokemonOptions :options="pokemonOptions"/>
+        :show-pokemon="gameStatus !== GameStatus.Playing"
+        />
+        <PokemonOptions 
+        :options="options" 
+        :block-selection="gameStatus !== GameStatus.Playing"
+        @selected-option="checkAnswer"
+        />
     </section>
 </template>
 

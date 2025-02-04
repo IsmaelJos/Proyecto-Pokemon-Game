@@ -1,18 +1,30 @@
 <template>
-    <section class="mt-5 flex-col">
-        <button v-for="{name, id} in options" :key="id" class="capitalize">
+    <section class="mt-5 flex flex-col">
+        <button 
+            v-for="{name, id} in options"
+            :key="id" 
+            @click="$emit('selectedOption', id)"
+            class="capitalize disabled:shadow-none disabled:bg-gray-100"
+            :disabled="blockSelection"
+        >
             {{ name }}
         </button>
     </section>
 </template>
 
 <script setup lang="ts">
-import type { Pokemon } from '@/modules/pokemon/interfaces';
+import type { Pokemon } from '../modules/pokemon/interfaces';
 interface Props{ 
     options: Pokemon[];
+    blockSelection: boolean;
 }
 
 defineProps<Props>();
+
+defineEmits<{
+    selectedOption: [id: number]
+}>();
+
 </script>
 
 

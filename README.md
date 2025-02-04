@@ -293,7 +293,22 @@ Se crea una lista de las opciones con botones
 
 <img src=./images/49.png width="900">
 
+#### Ahora tenemos que saber, cuando el usuario haga click sobre un botón, emitir cual es esa opción, para ello creamos defineEmits
 
+<img src=./images/51.png width="500">
 
+#### Ahora, en la consola debería aparecer el id del Pokemon al que estamos haciendo click
 
+<img src=./images/50.png width="700">
 
+## Vamos a centrarnos en saber cuando el jugador gana.
+
+#### En nuestro composable, vamos a crear una nueva función llamada checkAnswer. Esta función recibe el id de la opción que el usuario está pulsando y tendremos que verificar si ese id es igual el id del Pokemon
+
+<img src=./images/52.png width="550">
+
+#### Una vez que se determine que el usuario perdió, hay que bloquear los botones restantes para evitar que el usuario haga click hasta encontrar la respuesta correcta, vamos a añadir una nueva propiedad en PokemonOptions llamada block-selection. Será un booleano que recibiremos en PokemonOptions.vue y que tendremos que deshabilitar
+
+<img src=./images/53.png width="250">
+<img src=./images/54.png width="400">
+<img src=./images/55.png width="550">
